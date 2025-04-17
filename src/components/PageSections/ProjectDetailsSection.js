@@ -1,138 +1,163 @@
-// Project Images
-import projectDetailsImage from "@/assets/img/project/project-details.jpg";
-import challengeImg1 from "@/assets/img/project/challenge-img.jpg";
-import challengeImg2 from "@/assets/img/project/challenge-img-2.jpg";
-import solutionsImg from "@/assets/img/project/solutions-img.jpg";
-import {challenges, galleryImages, projectBrief, projectInfo, solutions} from "@/data/projects";
+"use client";
+
+import { useEffect, useState } from "react";
+import { woodCarvings } from "@/data/woodCarvings";
+import Link from "next/link";
 
 export default function ProjectDetailsSection() {
+    const [carving, setCarving] = useState(null);
+    const [activeImage, setActiveImage] = useState(null);
+
+    useEffect(() => {
+        // In a real application, you would get the ID from the URL
+        // For this example, we'll just use the first carving
+        const foundCarving = woodCarvings[0];
+        setCarving(foundCarving);
+        setActiveImage(foundCarving?.image);
+    }, []);
+
+    if (!carving) {
+        return <div className="container mt-5 text-center">Loading...</div>;
+    }
+
     return (
-        <div className="project-details-wrap section-padding pt-0">
+        <div className="carving-details-section section-padding pt-0">
             <div className="container">
+                {/* Product Title & Breadcrumb */}
+                <div className="row mb-4">
+                    <div className="col-12">
+                        <div className="section-title">
+                            <h1>{carving.title}</h1>
+                            <h6>{carving.category}</h6>
+                        </div>
+                    </div>
+                </div>
 
-                {/* Project Overview */}
-                <div className="row gx-5 justify-content-around align-items-end mt-30">
+                {/* Main Content Area */}
+                <div className="row gx-5">
+                    {/* Product Images */}
+                    <div className="col-lg-7">
+                        <div className="carving-main-image mb-4">
+                            <img
+                                src={activeImage?.src}
+                                alt={carving.title}
+                                className="img-fluid rounded shadow"
+                            />
+                        </div>
 
-                    {/* Project Image & Brief */}
-                    <div className="col-xl-6 col-lg-6">
-                        <div className="project-bg">
-                            <img src={projectDetailsImage.src} alt="Project Details" />
-                            <div className="project-brief-wrap">
-                                {projectBrief.map((item, index) => (
-                                    <div key={index} className={`single-brief ${item.className || ''}`}>
-                                        <h6>{item.label}</h6>
-                                        <p>{item.value}</p>
+                        {/* Thumbnail Gallery */}
+                        <div className="carving-thumbnails">
+                            <div className="row">
+                                {carving.gallery?.map((image, index) => (
+                                    <div className="col-3 mb-3" key={index}>
+                                        <img
+                                            src={image.src}
+                                            alt={`${carving.title} - View ${index + 1}`}
+                                            className={`img-fluid rounded cursor-pointer ${activeImage === image ? 'active-thumbnail' : ''}`}
+                                            style={{
+                                                cursor: 'pointer',
+                                                border: activeImage === image ? '2px solid #333' : '2px solid transparent'
+                                            }}
+                                            onClick={() => setActiveImage(image)}
+                                        />
                                     </div>
                                 ))}
                             </div>
                         </div>
                     </div>
 
-                    {/* Project Details */}
-                    <div className="col-xl-6 col-lg-6">
-                        <div className="project-details-inner">
-                            <div className="section-title">
-                                <h1>Lakefront <i>/</i> <br /> Retreat </h1>
-                                <h6 className="text-end">Architecture <br /> Design</h6>
+                    {/* Product Info */}
+                    <div className="col-lg-5">
+                        <div className="carving-info-card">
+                            <div className="carving-price mb-4">
+                                <h2>${carving.price}</h2>
+                                {!carving.inStock && (
+                                    <span className="sold-out-badge">Sold Out</span>
+                                )}
                             </div>
-                            <div className="project-details-info">
-                                {projectInfo.map((info, index) => (
-                                    <div key={index} className="single-info">
-                                        <p>{info.label}</p>
-                                        <h4>{info.value}</h4>
-                                    </div>
-                                ))}
+
+                            <div className="carving-description mb-4">
+                                <h5>Description</h5>
+                                <p>{carving.description}</p>
                             </div>
-                            <div className="project-desc">
-                                <p>A contemporary vacation home designed to blend seamlessly into its natural surroundings, featuring expansive views of the lake and surrounding green nature hill mountains.</p>
+
+                            <div className="carving-specs mb-4">
+                                <h5>Specifications</h5>
+                                <ul className="specs-list">
+                                    <li>
+                                        <span className="spec-label">Material:</span>
+                                        <span className="spec-value">{carving.material}</span>
+                                    </li>
+                                    <li>
+                                        <span className="spec-label">Dimensions:</span>
+                                        <span className="spec-value">{carving.dimensions}</span>
+                                    </li>
+                                    <li>
+                                        <span className="spec-label">Category:</span>
+                                        <span className="spec-value">{carving.category}</span>
+                                    </li>
+                                    <li>
+                                        <span className="spec-label">Availability:</span>
+                                        <span className="spec-value">{carving.inStock ? 'In Stock' : 'Sold Out'}</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div className="carving-care mb-4">
+                                <h5>Care Instructions</h5>
+                                <p>Keep away from direct sunlight and extreme temperature changes. Dust regularly with a soft cloth, and apply wood wax once or twice a year to maintain the luster.</p>
+                            </div>
+
+                            <div className="carving-actions mt-5">
+                                {carving.inStock ? (
+                                    <Link href="/contact" className="theme-btn w-100 text-center mb-3">
+                                        Inquire About This Piece
+                                    </Link>
+                                ) : (
+                                    <Link href="/contact" className="theme-btn w-100 text-center mb-3">
+                                        Commission Similar Piece
+                                    </Link>
+                                )}
+
+                                <Link href="/projects" className="secondary-btn w-100 text-center">
+                                    View More Carvings
+                                </Link>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                {/* Gallery Section */}
-                <div className="gallery-section mt-120">
-                    <h4>Gallery</h4>
-                    <hr />
-                    <div className="row gx-3 gy-3 mt-20">
-                        <div className="col-xl-6 col-lg-6 col-md-12">
-                            <div className="row gx-3 gy-3">
-                                {galleryImages.filter(img => !img.isBig).map((img, index) => (
-                                    <div key={index} className="col-xl-6 col-lg-6 col-md-6">
-                                        <div className="project-details-img">
-                                            <img src={img.image.src} alt={img.caption} />
-                                            <figure><figcaption>{img.caption}</figcaption></figure>
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
+                {/* Additional Information */}
+                <div className="row mt-5">
+                    <div className="col-12">
+                        <h3>The MWCarving Difference</h3>
+                        <hr />
+                    </div>
+
+                    <div className="col-md-4 mt-4">
+                        <div className="feature-box text-center p-4">
+                            <i className="las la-award fs-1 mb-3"></i>
+                            <h5>Master Craftsmanship</h5>
+                            <p>Each piece is meticulously handcrafted by experienced artisans with generations of woodworking expertise.</p>
                         </div>
-                        <div className="col-xl-6 col-lg-6 col-md-6">
-                            {galleryImages.filter(img => img.isBig).map((img, index) => (
-                                <div key={index} className="project-details-img big-img">
-                                    <img src={img.image.src} alt={img.caption} />
-                                    <figure><figcaption>{img.caption}</figcaption></figure>
-                                </div>
-                            ))}
+                    </div>
+
+                    <div className="col-md-4 mt-4">
+                        <div className="feature-box text-center p-4">
+                            <i className="las la-leaf fs-1 mb-3"></i>
+                            <h5>Premium Materials</h5>
+                            <p>We use only the finest sustainably sourced hardwoods to ensure beauty and longevity in every carving.</p>
+                        </div>
+                    </div>
+
+                    <div className="col-md-4 mt-4">
+                        <div className="feature-box text-center p-4">
+                            <i className="las la-certificate fs-1 mb-3"></i>
+                            <h5>Lifetime Guarantee</h5>
+                            <p>Our confidence in our quality is backed by a lifetime guarantee against craftsmanship defects.</p>
                         </div>
                     </div>
                 </div>
-
-                {/* Challenge Section */}
-                <div className="challenge-section section-padding pt-100">
-                    <div className="row">
-                        <div className="col-xl-12 text-end">
-                            <h4>Challenge</h4>
-                        </div>
-                        <div className="col-xl-12 col-lg-10">
-                            <div className="section-title">
-                                <h2>How to blend a <span>contemporary design seamlessly</span> in a natural environment.</h2>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="row gx-5 align-items-end">
-                        <div className="col-xl-3 col-lg-3">
-                            {challenges.map((challenge, index) => (
-                                <p key={index}>{challenge.text}</p>
-                            ))}
-                        </div>
-                        <div className="col-xl-3 col-lg-3 col-md-6">
-                            <div className="challenge-img-one">
-                                <img src={challengeImg1.src} alt="Challenge 1" />
-                            </div>
-                        </div>
-                        <div className="col-xl-6 col-lg-6 col-md-6">
-                            <div className="challenge-img-two">
-                                <img src={challengeImg2.src} alt="Challenge 2" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                {/* Solutions Section */}
-                <hr />
-                <div className="solutions-section section-padding pt-100 pb-0">
-                    <div className="row">
-                        <div className="col-xl-5 col-lg-5">
-                            <h4>Solutions</h4>
-                            <p>{solutions.text}</p>
-                        </div>
-                    </div>
-                    <div className="row align-items-center">
-                        <div className="col-xl-4 col-lg-4">
-                            <div className="solutions-img">
-                                <img src={solutionsImg.src} alt="Solutions" />
-                            </div>
-                        </div>
-                        <div className="col-xl-8 col-lg-8">
-                            <div className="solutions-content">
-                                <h3 dangerouslySetInnerHTML={{ __html: solutions.detailedText }} />
-                                <p>{solutions.detailedText2}</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
             </div>
         </div>
     );

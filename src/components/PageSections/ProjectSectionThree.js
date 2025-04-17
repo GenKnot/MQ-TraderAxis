@@ -1,18 +1,25 @@
 "use client";
 
-import React, {useState} from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from "next/link";
+import WoodCarvingCard from "@/components/WoodCarvingCard";
+import { woodCarvings, woodCarvingCategories } from "@/data/woodCarvings";
 
 export default function ProjectSectionThree() {
+    const [activeTab, setActiveTab] = useState("all");
+    const [filteredCarvings, setFilteredCarvings] = useState([]);
 
-    const categories = [
-        {id: 'all-works', label: 'All Works'},
-        {id: 'nature-sculptures', label: 'Nature Sculptures'},
-        {id: 'animal-carvings', label: 'Animal Carvings'},
-        {id: 'functional-art', label: 'Functional Art'}
-    ];
-
-    const [activeTab, setActiveTab] = useState(categories[0].id);
+    useEffect(() => {
+        if (activeTab === "all") {
+            setFilteredCarvings(woodCarvings);
+        } else {
+            setFilteredCarvings(
+                woodCarvings.filter(carving =>
+                    carving.category.toLowerCase().replace(/\s+/g, '-') === activeTab
+                )
+            );
+        }
+    }, [activeTab]);
 
     return (
         <div id="project-3" className="project-section section-padding pt-100 pb-100">
@@ -23,10 +30,9 @@ export default function ProjectSectionThree() {
                     </div>
                 </div>
                 <div className="row">
-
                     <nav>
                         <div className="nav project-list" role="tablist">
-                            {categories.map((category) => (
+                            {woodCarvingCategories.map((category) => (
                                 <button
                                     key={category.id}
                                     className={`nav-link ${activeTab === category.id ? 'active' : ''}`}
@@ -44,16 +50,28 @@ export default function ProjectSectionThree() {
                     </nav>
 
                     <div className="tab-content mt-5" id="nav-tabContent">
-                        <div className="row justify-content-center">
+                        <div className="row wood-carvings-grid">
+                            {filteredCarvings.length > 0 ? (
+                                filteredCarvings.map(carving => (
+                                    <div className="col-xl-6 col-lg-6 col-md-12 mb-4" key={carving.id}>
+                                        <WoodCarvingCard carving={carving} />
+                                    </div>
+                                ))
+                            ) : (
+                                <div className="col-12 text-center mt-4">
+                                    <p>No carvings found in this category. Check back soon for new additions!</p>
+                                </div>
+                            )}
+                        </div>
+
+                        <div className="row mt-5 justify-content-center">
                             <div className="col-lg-8 text-center">
-                                <h3 className="mb-4">Discover Our Exquisite Woodcarving Collection</h3>
                                 <p className="mb-5">
                                     Browse our gallery of handcrafted wooden masterpieces. Each piece is meticulously
-                                    carved by our master artisans,
-                                    bringing out the natural beauty of premium hardwoods while showcasing exceptional
-                                    craftsmanship.
+                                    carved by our master artisans, bringing out the natural beauty of premium hardwoods
+                                    while showcasing exceptional craftsmanship.
                                 </p>
-                                <Link href="/projects" className="theme-btn">View Full Gallery</Link>
+                                <Link href="/contact" className="theme-btn">Inquire About Custom Orders</Link>
                             </div>
                         </div>
                     </div>

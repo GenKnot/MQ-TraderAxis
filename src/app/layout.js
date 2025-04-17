@@ -7,6 +7,7 @@ import '@/assets/css/animate.css'
 import '@/assets/css/slick.css'
 import '@/assets/css/backToTop.css'
 import '@/assets/scss/style.scss';
+import '@/assets/css/custom-styles.css';
 
 import Preloader from '@/components/Preloader.js';
 import MouseCursor from "@/components/MouseCursor";

@@ -1,0 +1,131 @@
+/* Wood Carving Card Styles */
+.wood-carving-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  height: 100%;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.12);
+  }
+
+  .carving-image {
+    position: relative;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    &:hover img {
+      transform: scale(1.05);
+    }
+
+    .sold-out-badge {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background-color: rgba(220, 53, 69, 0.85);
+      color: white;
+      padding: 6px 12px;
+      border-radius: 4px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+  }
+
+  .carving-info {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
+    h4 {
+      margin-bottom: 8px;
+      font-size: 22px;
+      font-weight: 600;
+    }
+
+    .carving-category {
+      color: #666;
+      font-size: 14px;
+      margin-bottom: 12px;
+      font-style: italic;
+    }
+
+    .carving-description {
+      margin-bottom: 15px;
+      color: #333;
+      line-height: 1.5;
+    }
+
+    .carving-details {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 20px;
+      font-size: 15px;
+
+      span {
+        font-weight: 600;
+        color: #555;
+      }
+
+      .carving-price {
+        margin-top: 5px;
+        font-size: 18px;
+        font-weight: 600;
+
+        span {
+          font-size: 16px;
+        }
+      }
+    }
+
+    .carving-details-btn {
+      margin-top: auto;
+      display: inline-block;
+      text-align: center;
+      background-color: #f8f9fa;
+      color: #333;
+      padding: 10px 20px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      border: 1px solid #ddd;
+
+      i {
+        margin-left: 5px;
+        transition: transform 0.3s ease;
+      }
+
+      &:hover {
+        background-color: #333;
+        color: #fff;
+
+        i {
+          transform: translateX(4px);
+        }
+      }
+    }
+  }
+}
+
+.wood-carvings-grid {
+  margin-top: 40px;
+
+  @media (max-width: 768px) {
+    .col-md-12 {
+      margin-bottom: 30px;
+    }
+  }
+}

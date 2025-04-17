@@ -47,8 +47,8 @@ export default function MobileMenuNavBar({ menuItems }) {
 
                     {/* Mobile Action Bar */}
                     <div className="action-bar">
-                        <a href="mailto:info@Archipix.com">
-                            <i className="las la-envelope"/> info@Archipix.com
+                        <a href="mailto:info@mwcarving.com">
+                            <i className="las la-envelope"/> info@mwcarving.com
                         </a>
                         <a href="tel:123-456-7890">
                             <i className="fal fa-phone"/> 123-456-7890

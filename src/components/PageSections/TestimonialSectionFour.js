@@ -1,5 +1,5 @@
-import testimonialBg from "@/assets/img/testimonial-bg.jpg"
 import TestimonialOneSlider from "@/components/TestimonialOneSlider";
+import testimonialBg from "@/assets/img/testimonial-1.jpg";
 export default function TestimonialSectionFour() {
 
     return (

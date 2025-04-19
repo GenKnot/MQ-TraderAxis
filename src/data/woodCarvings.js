@@ -1,11 +1,4 @@
-import carving1 from "@/assets/img/project/1-0.jpg";
-import carving2 from "@/assets/img/project/1-1.png";
-import carving3 from "@/assets/img/project/1-4.jpg";
 import carving4 from "@/assets/img/project/1-5.jpg";
-import carving5 from "@/assets/img/project/project-1.jpg";
-import carving6 from "@/assets/img/project/project-2.jpg";
-import carving7 from "@/assets/img/project/project-3.jpg";
-import carving8 from "@/assets/img/project/project-4.jpg";
 
 export const woodCarvings = [
     {
@@ -17,8 +10,8 @@ export const woodCarvings = [
         dimensions: "18\" × 12\" × 8\"",
         price: 1795,
         inStock: true,
-        image: carving1,
-        gallery: [carving1, carving5, carving3]
+        image: carving4,
+        gallery: [carving4, carving4, carving4]
     },
     {
         id: 2,
@@ -29,8 +22,8 @@ export const woodCarvings = [
         dimensions: "24\" × 10\" × 8\"",
         price: 2250,
         inStock: true,
-        image: carving2,
-        gallery: [carving2, carving6, carving4]
+        image: carving4,
+        gallery: [carving4, carving4, carving4]
     },
     {
         id: 3,
@@ -41,8 +34,8 @@ export const woodCarvings = [
         dimensions: "12\" diameter × 4\" height",
         price: 895,
         inStock: false,
-        image: carving3,
-        gallery: [carving3, carving7, carving1]
+        image: carving4,
+        gallery: [carving4, carving4, carving4]
     },
     {
         id: 4,
@@ -54,7 +47,7 @@ export const woodCarvings = [
         price: 1950,
         inStock: true,
         image: carving4,
-        gallery: [carving4, carving8, carving2]
+        gallery: [carving4, carving4, carving4]
     },
     {
         id: 5,
@@ -65,8 +58,8 @@ export const woodCarvings = [
         dimensions: "22\" × 15\" × 10\"",
         price: 2450,
         inStock: true,
-        image: carving5,
-        gallery: [carving5, carving1, carving7]
+        image: carving4,
+        gallery: [carving4, carving4, carving4]
     },
     {
         id: 6,
@@ -77,8 +70,8 @@ export const woodCarvings = [
         dimensions: "36\" × 24\" × 3\"",
         price: 3200,
         inStock: true,
-        image: carving6,
-        gallery: [carving6, carving2, carving8]
+        image: carving4,
+        gallery: [carving4, carving4, carving4]
     },
     {
         id: 7,
@@ -89,8 +82,8 @@ export const woodCarvings = [
         dimensions: "12\" × 8\" × 6\"",
         price: 1250,
         inStock: true,
-        image: carving7,
-        gallery: [carving7, carving3, carving5]
+        image: carving4,
+        gallery: [carving4, carving4, carving4]
     },
     {
         id: 8,
@@ -101,8 +94,8 @@ export const woodCarvings = [
         dimensions: "28\" × 16\" × 4\"",
         price: 1850,
         inStock: false,
-        image: carving8,
-        gallery: [carving8, carving4, carving6]
+        image: carving4,
+        gallery: [carving4, carving4, carving4]
     }
 ];
 

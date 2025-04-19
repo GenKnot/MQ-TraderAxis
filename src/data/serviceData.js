@@ -57,43 +57,43 @@ export const servicesAccordions = [
 ];
 
 export const serviceTwoContent = [
-    { id: 1, title: "Nature Sculptures", image: serviceImg1 },
-    { id: 2, title: "Animal Carvings", image: serviceImg2 },
-    { id: 3, title: "Abstract Art", image: serviceImg3 },
-    { id: 4, title: "Relief Carvings", image: serviceImg4 },
-    { id: 5, title: "Functional Art", image: serviceImg5 },
-    { id: 6, title: "Custom Commissions", image: serviceImg6 },
+    {id: 1, title: "Nature Sculptures", image: serviceImg1},
+    {id: 2, title: "Animal Carvings", image: serviceImg2},
+    {id: 3, title: "Abstract Art", image: serviceImg3},
+    {id: 4, title: "Relief Carvings", image: serviceImg4},
+    {id: 5, title: "Functional Art", image: serviceImg5},
+    {id: 6, title: "Custom Commissions", image: serviceImg6},
 ];
 
 export const servicesSix = [
     {
         id: 1,
-        title: "Architectural Design",
-        description: "Our architectural design services focus on delivering innovative and sustainable solutions tailored to your needs."
+        title: "Nature Sculptures",
+        description: "Our nature-inspired wood sculptures capture the essence of forests, mountains, and natural landscapes. Each piece brings the serenity of nature into your home."
     },
     {
         id: 2,
-        title: "Interior Design",
-        description: "We provide interior design services that balance aesthetics with functionality to create beautiful living spaces."
+        title: "Animal Carvings",
+        description: "Our wildlife collection features intricately carved animals with lifelike details. From majestic eagles to graceful deer, each sculpture captures the spirit of the animal."
     },
     {
         id: 3,
-        title: "Project Management",
-        description: "Our project management team ensures timely delivery and cost efficiency while maintaining high standards."
+        title: "Abstract Art",
+        description: "For contemporary spaces, our abstract wood sculptures play with form, texture, and negative space to create striking modern art pieces that serve as conversation starters."
     },
     {
         id: 4,
-        title: "Historic Preservation",
-        description: "We specialize in preserving the historical integrity of buildings while integrating modern amenities."
+        title: "Relief Carvings",
+        description: "Our relief carvings transform flat wooden surfaces into dimensional artworks with depth and shadow. Perfect for wall art, these pieces range from traditional to contemporary designs."
     },
     {
         id: 5,
-        title: "Landscape Design",
-        description: "Our landscape design services transform outdoor spaces into stunning and functional environments."
+        title: "Functional Art",
+        description: "Art meets functionality in our collection of carved furniture, bowls, and home accessories. Each piece combines practicality with artistic excellence."
     },
     {
         id: 6,
-        title: "Furniture Remodel",
-        description: "We offer custom furniture remodeling services to revitalize your spaces with unique and personalized designs."
+        title: "Custom Commissions",
+        description: "Work directly with our master carvers to create one-of-a-kind pieces tailored to your vision. From concept to completion, we bring your ideas to life."
     }
 ];

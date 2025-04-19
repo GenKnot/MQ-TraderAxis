@@ -1,5 +1,5 @@
-import featureImage1 from "@/assets/img/service/service-feature-img.jpg";
-import featureImage2 from "@/assets/img/service/service-feature-img-2.jpg";
+import featureImage1 from "@/assets/img/service/service-feature-img-6.jpg";
+import featureImage2 from "@/assets/img/service/service-feature-img-7.jpg";
 
 export default function HeroSectionServicePage() {
     return (
@@ -12,7 +12,7 @@ export default function HeroSectionServicePage() {
                     <div className="col-xl-7 col-lg-7 col-md-8 order-1 order-lg-2">
                         <div className="hero-area-content">
                             <div className="section-title">
-                                <span className="meta">Since 1990 <br/>Master Woodcarving</span>
+                                <span className="meta">Since 2000 <br/>Master Woodcarving</span>
                                 <h1 className="first_line">Exceptional</h1>
                                 <h1 className="second_line">Craftsmanship</h1>
                                 <h1 className="third_line"><i>/</i> from MWCarving</h1>

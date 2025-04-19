@@ -26,7 +26,7 @@ export default function WoodCarvingCard({ carving }) {
                         <span>Price:</span> ${carving.price}
                     </div>
                 </div>
-                <Link href={`/projects/${carving.id}`} className="carving-details-btn">
+                <Link href={`/collections/${carving.id}`} className="carving-details-btn">
                     View Details <i className="las la-arrow-right"></i>
                 </Link>
             </div>

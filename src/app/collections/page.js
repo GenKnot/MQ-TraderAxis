@@ -6,7 +6,7 @@ import ClientSection from "@/components/PageSections/ClientSection";
 import NewsletterSection from "@/components/PageSections/NewsletterSection";
 
 const menus = [
-    { label: "Blog", to: "" },
+    { label: "Collections", to: "" },
 ];
 
 export default function Projects() {

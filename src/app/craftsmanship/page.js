@@ -7,7 +7,7 @@ import TestimonialSection from "@/components/PageSections/TestimonialSection";
 import NewsletterSection from "@/components/PageSections/NewsletterSection";
 
 const menus = [
-    { label: "Services", to: "" },
+    { label: "Craftsmanship", to: "" },
 ];
 
 export default function Services() {

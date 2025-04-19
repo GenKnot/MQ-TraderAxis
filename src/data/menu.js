@@ -10,25 +10,25 @@ export const menuItems = [
     },
 
     {
-        label: "Gallery",
-        link: "/projects",
-        subMenu: [
-            {label: "All Collections", link: "/projects"},
-            {label: "Nature Sculptures", link: "/projects/nature"},
-            {label: "Animal Carvings", link: "/projects/animals"},
-            {label: "Abstract Art", link: "/projects/abstract"},
-            {label: "Home Decor", link: "/projects/decor"}
-        ]
+        label: "Collections",
+        link: "/collections",
+        // subMenu: [
+        //     {label: "All Collections", link: "/collections"},
+        //     {label: "Nature Sculptures", link: "/collections/nature"},
+        //     {label: "Animal Carvings", link: "/collections/animals"},
+        //     {label: "Abstract Art", link: "/collections/abstract"},
+        //     {label: "Functional Art", link: "/collections/functional"}
+        // ]
     },
 
     {
         label: "Craftsmanship",
-        link: "/services",
-        subMenu: [
-            {label: "Our Process", link: "/services"},
-            {label: "Materials", link: "/services/materials"},
-            {label: "Custom Orders", link: "/services/custom"}
-        ]
+        link: "/craftsmanship",
+        // subMenu: [
+        //     {label: "Our Process", link: "/craftsmanship"},
+        //     {label: "Materials", link: "/craftsmanship/materials"},
+        //     {label: "Custom Orders", link: "/craftsmanship/custom"}
+        // ]
     },
 
     {

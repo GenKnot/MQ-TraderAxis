@@ -1,4 +1,4 @@
-import serviceBg from "@/assets/img/service/service-bg.jpg";
+import serviceBg from "@/assets/img/service/service-bg-1.jpg";
 import {servicesSix} from "@/data/serviceData";
 
 export default function ServiceSectionSix() {
@@ -7,7 +7,7 @@ export default function ServiceSectionSix() {
             <div className="container">
                 <div className="row justify-content-center text-end">
                     <div className="section-title">
-                        <h2>Service Type</h2>
+                        <h2>Carving Categories</h2>
                     </div>
                 </div>
 
@@ -50,7 +50,7 @@ export default function ServiceSectionSix() {
                     {/* Service Image Section */}
                     <div className="col-xl-6 col-lg-6">
                         <div className="service-bg-wrap">
-                            <img src={serviceBg.src} alt="Service Background" />
+                            <img src={serviceBg.src} alt="Wood carving showcase" />
                         </div>
                     </div>
                 </div>

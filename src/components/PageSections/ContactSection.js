@@ -61,7 +61,7 @@ export default function ContactSection() {
                                     </div>
                                     <div className="single-contact-info">
                                         <p>Workshop Address</p>
-                                        <h4>123 Artisan Way, Suite 200, Beijing</h4>
+                                        <h4>123 Street Way, Suite 200, Beijing</h4>
                                     </div>
                                     {/*<div className="social-area">*/}
                                     {/*    <a href="#"><i className="fab fa-facebook-f"></i></a>*/}

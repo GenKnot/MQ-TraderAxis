@@ -29,8 +29,8 @@ export default function FooterAreaSection() {
                             <ul>
                                 <li>
                                     <Link href="/about">About</Link>
-                                    <Link href="/projects">Gallery</Link>
-                                    <Link href="/services">Craftsmanship</Link>
+                                    <Link href="/collections">Collections</Link>
+                                    <Link href="/craftsmanship">Craftsmanship</Link>
                                     <Link href="/contact">Contact</Link>
                                     <Link href="/faq">FAQ</Link>
                                 </li>

@@ -1,4 +1,4 @@
-import featureImage from "@/assets/img/project/project-feature-img-2.jpg";
+import featureImage from "@/assets/img/project/project-feature-img-5.jpg";
 
 export default function HeroSectionProjects() {
     return (
@@ -9,17 +9,17 @@ export default function HeroSectionProjects() {
                         <div className="hero-area-content">
                             <div className="section-title">
                                 <h1>Discover Our<br/></h1>
-                                <h1>Portfolio<i>/</i> of Stunning <br/></h1>
-                                <h1 className="pl-200">Designs</h1>
+                                <h1>Wood Carving</h1>
+                                <h1 className="pl-200">Masterpieces</h1>
                             </div>
                         </div>
                     </div>
                     <div className="col-xl-3 col-lg-3 text-end">
                         <div className="service-info">
                             <p>Since 2000</p>
-                            <h4>Architecture</h4>
-                            <h4>Interior</h4>
-                            <h4>Landscape</h4>
+                            <h4>Nature Sculptures</h4>
+                            <h4>Animal Carvings</h4>
+                            <h4>Functional Art</h4>
                         </div>
                     </div>
                 </div>

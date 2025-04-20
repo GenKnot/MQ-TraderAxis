@@ -105,5 +105,8 @@ export const woodCarvingCategories = [
     { id: "animal-carving", label: "Animal Carvings" },
     { id: "relief-carving", label: "Relief Carvings" },
     { id: "abstract-art", label: "Abstract Art" },
-    { id: "functional-art", label: "Functional Art" }
+    { id: "functional-art", label: "Functional Art" },
+    { id: "stainless-steel", label: "Stainless Steel Products" },
+    { id: "copper", label: "Copper Products" },
+    { id: "silver", label: "Silver Products" }
 ];

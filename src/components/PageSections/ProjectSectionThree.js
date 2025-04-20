@@ -29,9 +29,18 @@ export default function ProjectSectionThree() {
                         <h2>Our Wood Carving Collections</h2>
                     </div>
                 </div>
+                <div className="row mb-4">
+                    <div className="col-lg-12">
+                        <p>
+                            Browse our diverse collection of handcrafted artworks. In addition to our exquisite wood carvings and art pieces, 
+                            we also specialize in small parts processing and precision parts manufacturing. We welcome custom orders and can 
+                            create bespoke solutions tailored to your specific requirements.
+                        </p>
+                    </div>
+                </div>
                 <div className="row">
                     <nav>
-                        <div className="nav project-list" role="tablist">
+                        <div className="nav project-list d-flex flex-wrap" role="tablist">
                             {woodCarvingCategories.map((category) => (
                                 <button
                                     key={category.id}

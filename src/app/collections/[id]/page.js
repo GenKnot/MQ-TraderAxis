@@ -4,7 +4,7 @@ import TestimonialSectionFour from "@/components/PageSections/TestimonialSection
 import ProjectDetailsSection from "@/components/PageSections/ProjectDetailsSection";
 
 const menus = [
-    { label: "Projects", to: "/projects" },
+    { label: "Collections", to: "/collections" },
     { label: "Details", to: "" },
 ];
 

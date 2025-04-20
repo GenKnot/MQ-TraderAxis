@@ -17,10 +17,10 @@ export default function FooterAreaSection() {
                                 Address
                             </p>
                             <div className="company-email">
-                                <a href="mailto:info@mwcarving.com">info@mwcarving.com</a>
+                                <a href="mailto:zz119020@proton.me">zz119020@proton.me</a>
                             </div>
                             <div className="phone-number">
-                                <p>+1-503-555-7890</p>
+                                <p>9176672791</p>
                             </div>
 
                         </div>

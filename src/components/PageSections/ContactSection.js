@@ -17,7 +17,7 @@ export default function ContactSection() {
                 <div className="row mt-60">
                     <div className="col-xl-5 col-lg-5">
                         <div className="contact-text">
-                            <p>Interested in acquiring a masterpiece for your collection or commissioning a custom wood carving? We're here to help! Fill out the contact form or reach out directly via phone or email. Our team will respond within 24 hours to discuss your interests, answer questions about our work, or arrange a studio visit to see our craftsmanship in person.</p>
+                            <p>Interested in acquiring a masterpiece for your collection or commissioning a custom wood carving? We're here to help! Fill out the contact form or reach out directly via phone or email. Our team will respond within 12 hours to discuss your interests, answer questions about our work, or arrange a studio visit to see our craftsmanship in person.</p>
                         </div>
                     </div>
                     <div className="offset-xl-1 col-xl-6 offset-lg-1 col-lg-6">
@@ -53,11 +53,11 @@ export default function ContactSection() {
                                 <div className="contact-info-inner">
                                     <div className="single-contact-info">
                                         <p>Email</p>
-                                        <h4>info@mwcarving.com</h4>
+                                        <h4>zz119020@proton.me</h4>
                                     </div>
                                     <div className="single-contact-info">
                                         <p>Phone</p>
-                                        <h4>(503) 555-7890</h4>
+                                        <h4>9176672791</h4>
                                     </div>
                                     <div className="single-contact-info">
                                         <p>Workshop Address</p>

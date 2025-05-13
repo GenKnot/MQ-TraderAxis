@@ -1,41 +1,85 @@
 "use client";
 
-import { useRef } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, EffectFade, Navigation, Pagination } from "swiper/modules";
+import {useEffect, useRef, useState} from "react";
+import {Swiper, SwiperSlide} from "swiper/react";
+import {Autoplay, EffectFade, Navigation, Pagination} from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "swiper/css/effect-fade";
-import {homePageBannersData} from "@/data/slider";
+import {fetchBanners} from "@/utils/api-utils";
+// import {homePageBannersData} from "@/data/slider";
 
 export default function HomepageSlides() {
     const swiperRef = useRef(null);
+    const [banners, setBanners] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+
+    useEffect(() => {
+        async function loadBanners() {
+            try {
+                setLoading(true);
+                const data = await fetchBanners();
+                if (data) {
+                    setBanners(data);
+                }
+            } catch (err) {
+                console.error("Error loading banners:", err);
+                setError("Failed to load banner content");
+            } finally {
+                setLoading(false);
+            }
+        }
+
+        loadBanners();
+    }, []);
+
+    if (loading) {
+        return (
+            <div className="slider-wrapper position-relative">
+                <div className="loading-container text-center py-5">
+                    <div className="spinner-border text-primary" role="status">
+                        <span className="visually-hidden">Loading...</span>
+                    </div>
+                </div>
+            </div>
+        );
+    }
+
+    if (error || !banners || banners.length === 0) {
+        return (
+            <div className="slider-wrapper position-relative">
+                <div className="alert alert-warning text-center py-5" role="alert">
+                    {error || "No banner content available"}
+                </div>
+            </div>
+        );
+    }
 
     return (
         <div className="slider-wrapper position-relative">
-            {/* ✅ Swiper Component */}
             <Swiper
                 onSwiper={(swiper) => (swiperRef.current = swiper)} // Store Swiper instance
                 modules={[Navigation, Pagination, Autoplay, EffectFade]}
                 slidesPerView={1}
                 loop={true}
-                autoplay={{ delay: 3000, disableOnInteraction: false }}
+                autoplay={{delay: 3000, disableOnInteraction: false}}
                 effect="fade"
                 breakpoints={{
-                    0: { slidesPerView: 1 },
-                    600: { slidesPerView: 1 },
-                    768: { slidesPerView: 1 },
-                    1100: { slidesPerView: 1 },
+                    0: {slidesPerView: 1},
+                    600: {slidesPerView: 1},
+                    768: {slidesPerView: 1},
+                    1100: {slidesPerView: 1},
                 }}
                 className="homepage-slides"
             >
-                {homePageBannersData.map((banner) => (
+                {banners.map((banner) => (
                     <SwiperSlide key={banner.id} className="single-slide-item">
                         <div
                             className="slider-bg bg-cover"
                             style={{
-                                backgroundImage: `url(${banner.image.src})`,
+                                backgroundImage: `url(${banner.image})`,
                                 backgroundSize: "cover",
                                 backgroundPosition: "center",
                                 height: "500px",
@@ -91,7 +135,6 @@ export default function HomepageSlides() {
                                                 <i className="las la-arrow-right"></i>
                                             </button>
                                         </div>
-
                                     </div>
                                 </div>
                             </div>

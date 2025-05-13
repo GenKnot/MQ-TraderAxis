@@ -1,21 +1,21 @@
 import Breadcrumb from "@/components/Breadcrumb";
 import NewsletterSection from "@/components/PageSections/NewsletterSection";
 import TestimonialSectionFour from "@/components/PageSections/TestimonialSectionFour";
-import ProjectDetailsSection from "@/components/PageSections/ProjectDetailsSection";
+import CollectionDetailPage from "@/components/PageSections/CollectionDetailPage";
 
 const menus = [
     { label: "Collections", to: "/collections" },
     { label: "Details", to: "" },
 ];
 
-export default function ProjectsShow() {
+export default function CollectionsShow() {
     return(
         <>
             {/*breadcrumb*/}
             <Breadcrumb menus={menus}/>
 
             {/*Project Details*/}
-            <ProjectDetailsSection />
+            <CollectionDetailPage />
 
             {/*Testimonial Section*/}
             <TestimonialSectionFour />

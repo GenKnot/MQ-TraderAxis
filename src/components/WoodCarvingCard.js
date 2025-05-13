@@ -3,10 +3,26 @@
 import Link from "next/link";
 
 export default function WoodCarvingCard({ carving }) {
+    if (!carving) {
+        return (
+            <div className="wood-carving-card">
+                <div className="alert alert-warning">Carving data unavailable</div>
+            </div>
+        );
+    }
+
     return (
         <div className="wood-carving-card">
             <div className="carving-image">
-                <img src={carving.image.src} alt={carving.title} className="img-fluid" />
+                <img
+                    src={carving.image}
+                    alt={carving.title}
+                    className="img-fluid"
+                    onError={(e) => {
+                        e.target.onerror = null;
+                        e.target.src = "/assets/img/placeholder.jpg"; // Fallback image path
+                    }}
+                />
                 {carving.inStock === false && (
                     <span className="sold-out-badge">Sold Out</span>
                 )}
@@ -23,7 +39,7 @@ export default function WoodCarvingCard({ carving }) {
                         <span>Dimensions:</span> {carving.dimensions}
                     </div>
                     <div className="carving-price">
-                        <span>Price:</span> ${carving.price}
+                        <span>Price:</span> ${typeof carving.price === 'number' ? carving.price.toLocaleString() : carving.price}
                     </div>
                 </div>
                 <Link href={`/collections/${carving.id}`} className="carving-details-btn">

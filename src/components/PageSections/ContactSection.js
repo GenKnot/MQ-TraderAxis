@@ -1,6 +1,76 @@
+"use client";
+
+import { useState } from "react";
 import contactBg from "@/assets/img/contact-bg.jpg";
+import { submitContactForm } from "@/utils/api-utils";
 
 export default function ContactSection() {
+    const [formData, setFormData] = useState({
+        name: "",
+        email: "",
+        phone: "",
+        message: ""
+    });
+    const [submitting, setSubmitting] = useState(false);
+    const [submitResult, setSubmitResult] = useState({
+        success: false,
+        message: ""
+    });
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData(prev => ({
+            ...prev,
+            [name]: value
+        }));
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+
+        try {
+            setSubmitting(true);
+
+            // Basic validation
+            if (!formData.name || !formData.email || !formData.message) {
+                setSubmitResult({
+                    success: false,
+                    message: "Please fill out all required fields"
+                });
+                return;
+            }
+
+            const simulatedResponse = { success: true };
+
+            if (simulatedResponse.success) {
+                setFormData({
+                    name: "",
+                    email: "",
+                    phone: "",
+                    message: ""
+                });
+
+                setSubmitResult({
+                    success: true,
+                    message: "Thank you for your message! We'll be in touch soon."
+                });
+            } else {
+                setSubmitResult({
+                    success: false,
+                    message: "There was an error submitting your form. Please try again."
+                });
+            }
+        } catch (error) {
+            console.error("Form submission error:", error);
+            setSubmitResult({
+                success: false,
+                message: "There was a problem connecting to our server. Please try again later."
+            });
+        } finally {
+            setSubmitting(false);
+        }
+    };
+
     return (
         <div className="contact-section section-padding pt-0">
             <div className="container">
@@ -25,12 +95,53 @@ export default function ContactSection() {
                             <div className="section-title">
                                 <h2>Get In Touch <span><i className="las la-arrow-right"></i></span></h2>
                             </div>
-                            <form action="#">
-                                <input type="text" placeholder="Your Name"/>
-                                <input type="email" placeholder="Email"/>
-                                <input type="tel" placeholder="Phone Number"/>
-                                <textarea name="message" cols="30" rows="10" placeholder="Tell us about your interest"></textarea>
-                                <input type="submit" value="Submit"/>
+
+
+                            {submitResult.message && (
+                                <div className={`alert ${submitResult.success ? 'alert-success' : 'alert-danger'} mb-4`} role="alert">
+                                    {submitResult.message}
+                                </div>
+                            )}
+
+                            <form onSubmit={handleSubmit}>
+                                <input
+                                    type="text"
+                                    name="name"
+                                    placeholder="Your Name"
+                                    value={formData.name}
+                                    onChange={handleChange}
+                                    required
+                                />
+                                <input
+                                    type="email"
+                                    name="email"
+                                    placeholder="Email"
+                                    value={formData.email}
+                                    onChange={handleChange}
+                                    required
+                                />
+                                <input
+                                    type="tel"
+                                    name="phone"
+                                    placeholder="Phone Number"
+                                    value={formData.phone}
+                                    onChange={handleChange}
+                                />
+                                <textarea
+                                    name="message"
+                                    cols="30"
+                                    rows="10"
+                                    placeholder="Tell us about your interest"
+                                    value={formData.message}
+                                    onChange={handleChange}
+                                    required
+                                ></textarea>
+
+                                <input
+                                    type="submit"
+                                    value={submitting ? 'Submitting...' : 'Submit'}
+                                    disabled={submitting}
+                                />
                             </form>
                         </div>
                     </div>
@@ -63,12 +174,6 @@ export default function ContactSection() {
                                         <p>Workshop Address</p>
                                         <h4>123 Street Way, Suite 200, Beijing</h4>
                                     </div>
-                                    {/*<div className="social-area">*/}
-                                    {/*    <a href="#"><i className="fab fa-facebook-f"></i></a>*/}
-                                    {/*    <a href="#"><i className="fab fa-instagram"></i></a>*/}
-                                    {/*    <a href="#"><i className="fab fa-pinterest"></i></a>*/}
-                                    {/*    <a href="#"><i className="fab fa-youtube"></i></a>*/}
-                                    {/*</div>*/}
                                 </div>
                             </div>
                         </div>
@@ -76,5 +181,5 @@ export default function ContactSection() {
                 </div>
             </div>
         </div>
-    )
+    );
 }

@@ -20,10 +20,10 @@ export default function AboutSectionTwo() {
                                 </div>
                             </div>
                             <div className="heading-animation">
-                                <h3>MWCarving is a team of dedicated <br/> master woodcarvers creating exceptional art</h3>
+                                <h3>MWCarving is a team of dedicated <br/> master artisans creating exceptional works</h3>
                             </div>
                             <div className="p-animation">
-                                <p>With decades of experience in traditional and contemporary woodcarving techniques, we transform premium hardwoods into breathtaking sculptures, reliefs, and functional art pieces that become family heirlooms and valuable collectibles.</p>
+                                <p>With decades of experience in traditional and contemporary techniques, we transform premium materials into breathtaking sculptures, precision metal parts, and functional art pieces that become family heirlooms and valuable collectibles.</p>
                             </div>
                             <Link href="/about" className="theme-btn mt-30">Learn More</Link>
                         </div>

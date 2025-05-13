@@ -12,9 +12,9 @@
             @media #{$xs} {
                 display: none;
             }
-        
+
         }
-      
+
         @media #{$xs} {
             font-size: 40px;
             line-height: 45px;
@@ -45,14 +45,14 @@
           }
     }
     @media #{$xs} {
-        text-align: center;        
+        text-align: center;
         h2 {
            font-size: 35px;
            br{
             display: none;
            }
           }
-    }  
+    }
 }
 
 .cta-content p {
@@ -69,7 +69,7 @@
 }
 
 
-// CTA Image 
+// CTA Image
 
 .cta-img-area{
     position: relative;
@@ -77,7 +77,7 @@
     @media #{$xs}{
       display: none;
     }
-  
+
     .cta-inner {
       overflow: hidden;
       position: absolute;
@@ -86,9 +86,9 @@
       right: 0;
       bottom: 0;
       display: flex;
-      justify-content: center;  
+      justify-content: center;
       align-items: center;
-  
+
       .cta-img-wrap {
         position: absolute;
         top: 0;
@@ -99,9 +99,9 @@
         justify-content: center;
         align-items: center;
       }
-      
+
     }
-  
+
     h2 {
       font-size: 70px;
       font-weight: 500;
@@ -112,16 +112,16 @@
           br{
             display: none;
           }
-      }      
-      
+      }
+
     }
   }
-  
-  
-  
+
+
+
   .cta-img-area .cta-inner img {
     width: 100%;
     object-fit: cover;
     object-position: center center;
   }
-  
+

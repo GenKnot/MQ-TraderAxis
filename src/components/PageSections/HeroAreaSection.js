@@ -18,13 +18,12 @@ export default function HeroAreaSection() {
                                     {/*<span>*/}
                                     {/*    <Image src={headlineImg} alt="" style={{ height: 'auto'}}/>*/}
                                     {/*</span>{" "}*/}
-                                    Wood Carvings <br/> Handcrafted Perfection
+                                    Wood & Metal <br/> Handcrafted Perfection
                                 </h1>
                                 <div className="p-animation">
                                     <p>
-                                        Our team of master woodcarvers creates unique, handcrafted artworks
-                                        that bring natural beauty and artistic excellence <br/> to your home
-                                        and collection.
+                                        Our master artisans create unique, handcrafted artworks in wood and metal,
+                                        bringing natural beauty and precision engineering to your home and collection.
                                     </p>
                                 </div>
                             </div>

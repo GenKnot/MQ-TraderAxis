@@ -8,6 +8,7 @@ import '@/assets/css/slick.css'
 import '@/assets/css/backToTop.css'
 import '@/assets/scss/style.scss';
 import '@/assets/css/custom-styles.css';
+import { Analytics } from '@vercel/analytics/next';
 
 import Preloader from '@/components/Preloader.js';
 import MouseCursor from "@/components/MouseCursor";
@@ -76,6 +77,7 @@ export default function RootLayout({children}) {
         <Script src="/assets/js/smoother-script.js"></Script>
         <Script src="/assets/js/heading-animation.js"></Script>
         <Script src="/assets/js/paragraph-animation.js"></Script>
+        <Analytics />
         </body>
         </html>
     );

@@ -1,8 +1,8 @@
 // Development URL
-export const API_BASE_URL = 'http://127.0.0.1:8000';
+// export const API_BASE_URL = 'http://127.0.0.1:8000';
 
 // Production URL
-// export const API_BASE_URL = 'https://api.mwcarving.com';
+export const API_BASE_URL = 'https://api.trade-axis.com';
 
 export const ENDPOINTS = {
     CATEGORIES: {

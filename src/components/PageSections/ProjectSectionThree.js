@@ -98,7 +98,7 @@ export default function ProjectSectionThree() {
             <div className="container">
                 <div className="row">
                     <div className="section-title">
-                        <h2>Our Wood Carving Collections</h2>
+                        <h2>Our Collections</h2>
                     </div>
                 </div>
                 <div className="row mb-4">

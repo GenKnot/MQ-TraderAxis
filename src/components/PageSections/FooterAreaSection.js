@@ -7,7 +7,7 @@ export default function FooterAreaSection() {
                 <div className="footer-up">
                     <div className="row">
                         <div className="col-lg-4 col-md-6 col-sm-12">
-                            <Link href="/" className="logo">MWCarving</Link>
+                            <Link href="/" className="logo">M&Q TraderAxis</Link>
                             <p>Exceptional Wood Carving Art <br/> Handcrafted by Master Artisans
                             </p>
                         </div>

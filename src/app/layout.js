@@ -23,8 +23,8 @@ import {AppWrapper} from "@/context";
 import BackToTop from "@/components/BackToTop";
 
 export const metadata = {
-    title: "MWCarving | Exquisite Wood Carving Art Gallery",
-    description: "MWCarving offers handcrafted wooden sculptures and carvings with exceptional artistry and quality craftsmanship.",
+    title: "M&Q TraderAxis | Art & Precision Manufacturing",
+    description: "M&Q TraderAxis offers exceptional art pieces and precision manufacturing services, from functional art to custom metal parts with uncompromising craftsmanship.",
 };
 
 export default function RootLayout({children}) {

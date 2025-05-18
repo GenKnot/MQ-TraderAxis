@@ -28,7 +28,7 @@ export default function HeroSectionTwo() {
                         <div className="row">
                             <div className="offset-xl-5 col-xl-7 offset-md-4 col-md-6 text-lg-end">
                                 <div className="p-animation">
-                                    <p>Welcome to MWCarving, where master artisans transform premium materials into breathtaking sculptures and functional art. From traditional wood carvings to precision metal parts, each piece showcases our commitment to excellence in craftsmanship.</p>
+                                    <p>Welcome to M&Q TraderAxis, where master artisans transform premium materials into breathtaking sculptures and precision-engineered products. From artistic masterpieces to custom metal parts, each piece showcases our commitment to excellence in both artistry and manufacturing.</p>
                                 </div>
                                 <Link href="/contact" className="theme-btn mt-20">Commission a Piece</Link>
                             </div>

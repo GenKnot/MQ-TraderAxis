@@ -6,7 +6,7 @@ export default function ProcessSection({ customClass }) {
                     <div className="col-xl-6 col-lg-6">
                         <div className="section-title">
                             <div className="heading-animation">
-                                <h2>Our Crafting Process</h2>
+                                <h2>Our Process</h2>
                             </div>
                         </div>
                     </div>

@@ -33,7 +33,7 @@ export default function Header() {
                         <div className="header-inner-box">
 
                             {/* Logo */}
-                            <Link href="/" className="logo">MWCarving</Link>
+                            <Link href="/" className="logo">M&Q TraderAxis</Link>
 
                             {/* Desktop Menu */}
                             <div className="main-menu d-none d-lg-block">

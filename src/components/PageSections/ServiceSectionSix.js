@@ -7,7 +7,9 @@ export default function ServiceSectionSix() {
             <div className="container">
                 <div className="row justify-content-center text-end">
                     <div className="section-title">
-                        <h2>Carving Categories</h2>
+                        <div className="heading-animation">
+                            <h2>Our Collections</h2>
+                        </div>
                     </div>
                 </div>
 

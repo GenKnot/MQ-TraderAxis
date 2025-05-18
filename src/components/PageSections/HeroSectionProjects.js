@@ -8,9 +8,8 @@ export default function HeroSectionProjects() {
                     <div className="col-xl-9 col-lg-9">
                         <div className="hero-area-content">
                             <div className="section-title">
-                                <h1>Discover Our<br/></h1>
-                                <h1>Wood Carving</h1>
-                                <h1 className="pl-200">Masterpieces</h1>
+                                <h2>Discover Our Diverse Range of Art & Manufacturing Excellence</h2>
+                                <p>Explore our curated collections of functional art, abstract pieces, and precision-engineered products. From artistic masterpieces to custom metal parts, each piece reflects our commitment to excellence in both artistry and manufacturing.</p>
                             </div>
                         </div>
                     </div>

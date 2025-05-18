@@ -17,10 +17,9 @@ export default function HistorySection() {
                     <div className="col-xl-4 col-lg-4 col-md-6">
                         <div className="single-history-item">
                             <div className="content-wrap">
-                                <h5>MWCarving Founding</h5>
-                                <p>1990</p>
-                                <p>Michael Wilson establishes MWCarving with a vision to create museum-quality wooden sculptures and preserve traditional woodcarving techniques.
-                                </p>
+                                <h5>M&Q TraderAxis Founding</h5>
+                                <p>2000</p>
+                                <p>Michael and Quinn establish M&Q TraderAxis with a vision to create exceptional art pieces and precision manufacturing services, combining traditional craftsmanship with modern technology.</p>
                             </div>
                         </div>
                     </div>
@@ -45,8 +44,7 @@ export default function HistorySection() {
                             <div className="content-wrap">
                                 <h5>First Major Exhibition</h5>
                                 <p>1995</p>
-                                <p>MWCarving gains international recognition with its first major exhibition at the International Wood Art Gallery in New York.
-                                </p>
+                                <p>M&Q TraderAxis gains international recognition with its first major exhibition at the International Art & Manufacturing Expo in New York.</p>
                             </div>
 
                         </div>

@@ -17,9 +17,9 @@ export default function HistorySection() {
                     <div className="col-xl-4 col-lg-4 col-md-6">
                         <div className="single-history-item">
                             <div className="content-wrap">
-                                <h5>M&Q TraderAxis Founding</h5>
+                                <h5>M&Q TradeAxis Founding</h5>
                                 <p>2000</p>
-                                <p>Michael and Quinn establish M&Q TraderAxis with a vision to create exceptional art pieces and precision manufacturing services, combining traditional craftsmanship with modern technology.</p>
+                                <p>Michael and Quinn establish M&Q TradeAxis with a vision to create exceptional art pieces and precision manufacturing services, combining traditional craftsmanship with modern technology.</p>
                             </div>
                         </div>
                     </div>
@@ -44,7 +44,7 @@ export default function HistorySection() {
                             <div className="content-wrap">
                                 <h5>First Major Exhibition</h5>
                                 <p>1995</p>
-                                <p>M&Q TraderAxis gains international recognition with its first major exhibition at the International Art & Manufacturing Expo in New York.</p>
+                                <p>M&Q TradeAxis gains international recognition with its first major exhibition at the International Art & Manufacturing Expo in New York.</p>
                             </div>
 
                         </div>

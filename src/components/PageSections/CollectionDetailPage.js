@@ -248,7 +248,7 @@ export default function CollectionDetailPage() {
                     {/* Additional Information */}
                     <div className="row mt-5">
                         <div className="col-12">
-                            <h3>The M&Q TraderAxis Difference</h3>
+                            <h3>The M&Q TradeAxis Difference</h3>
                             <hr />
                         </div>
 

@@ -42,7 +42,7 @@ export const testimonialOneData = [
     {
         id: 1,
         content:
-            "I commissioned a custom wood carving from M&Q TraderAxis for my anniversary gift, and I couldn't be happier with the result. The attention to detail and craftsmanship are absolutely stunning.",
+            "I commissioned a custom wood carving from M&Q TradeAxis for my anniversary gift, and I couldn't be happier with the result. The attention to detail and craftsmanship are absolutely stunning.",
         author: "Michael Roberts",
         location: "New York, USA",
         image: testimonialImg2,

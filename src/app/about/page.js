@@ -13,8 +13,8 @@ const menus = [
 ];
 
 export const metadata = {
-    title: "About Us - M&Q TraderAxis | Art & Precision Manufacturing",
-    description: "About Us - M&Q TraderAxis offers exceptional art pieces and precision manufacturing services with uncompromising quality and craftsmanship.",
+    title: "About Us - M&Q TradeAxis | Art & Precision Manufacturing",
+    description: "About Us - M&Q TradeAxis offers exceptional art pieces and precision manufacturing services with uncompromising quality and craftsmanship.",
 };
 
 export default function About() {

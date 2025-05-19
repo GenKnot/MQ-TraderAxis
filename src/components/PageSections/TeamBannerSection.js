@@ -15,7 +15,7 @@ export default function TeamBannerSection() {
                             <div className="section-title">
                                 <h2>Master Woodcarvers</h2>
                             </div>
-                            <h3>M&Q TraderAxis is a collective of skilled artisans and precision manufacturing experts</h3>
+                            <h3>M&Q TradeAxis is a collective of skilled artisans and precision manufacturing experts</h3>
                             <p>With decades of experience in traditional and contemporary carving techniques. Each member brings unique expertise and artistic vision to our creations, ensuring exceptional quality and artistry in every piece we produce.</p>
                         </div>
                     </div>

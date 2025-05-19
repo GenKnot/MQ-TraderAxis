@@ -12,12 +12,12 @@ export default function OffCanvas() {
             </div>
             <div className="logo-side mb-30">
                 <div className="logo">
-                    <Link href="/" className="logo">M&Q TraderAxis</Link>
+                    <Link href="/" className="logo">M&Q TradeAxis</Link>
                 </div>
             </div>
             <div className="side-info">
                 <div className="contact-list mb-40">
-                    <p>Welcome to M&Q TraderAxis, where exceptional artistry meets precision manufacturing. Our gallery showcases unique handcrafted pieces and custom metal products, each meticulously created with uncompromising quality and attention to detail.</p>
+                    <p>Welcome to M&Q TradeAxis, where exceptional artistry meets precision manufacturing. Our gallery showcases unique handcrafted pieces and custom metal products, each meticulously created with uncompromising quality and attention to detail.</p>
                     <Image src={offCanvasImg} alt="Wood carving in process" style={{ height: 'auto'}}/>
 
                     <div className="mt-30 mb-30">

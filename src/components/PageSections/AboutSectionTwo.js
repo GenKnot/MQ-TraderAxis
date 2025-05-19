@@ -16,11 +16,11 @@ export default function AboutSectionTwo() {
                         <div className="about-content-wrapper">
                             <div className="section-title">
                                 <div className="heading-animation">
-                                    <h2>About <span>/</span> <br/> M&Q TraderAxis</h2>
+                                    <h2>About <span>/</span> <br/> M&Q TradeAxis</h2>
                                 </div>
                             </div>
                             <div className="heading-animation">
-                                <h3>M&Q TraderAxis is a team of dedicated <br/> master artisans creating exceptional works</h3>
+                                <h3>M&Q TradeAxis is a team of dedicated <br/> master artisans creating exceptional works</h3>
                             </div>
                             <div className="p-animation">
                                 <p>With decades of experience in traditional and contemporary techniques, we transform premium materials into breathtaking sculptures, precision metal parts, and functional art pieces that become family heirlooms and valuable collectibles.</p>

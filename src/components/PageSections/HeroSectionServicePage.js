@@ -15,7 +15,7 @@ export default function HeroSectionServicePage() {
                                 <span className="meta">Since 2000 <br/>Art & Manufacturing</span>
                                 <h1 className="first_line">Exceptional</h1>
                                 <h1 className="second_line">Craftsmanship</h1>
-                                <h1 className="third_line"><i>/</i> from M&Q TraderAxis</h1>
+                                <h1 className="third_line"><i>/</i> from M&Q TradeAxis</h1>
                             </div>
                         </div>
                         <div className="row align-items-end">
@@ -25,7 +25,7 @@ export default function HeroSectionServicePage() {
                             <div className="col-xl-7 col-lg-7 col-md-6 d-none d-md-block text-end">
                                 <div className="section-title mb-0">
                                     <span><i className="las la-arrow-down mt-30"></i></span>
-                                    <h3>M&Q TraderAxis</h3>
+                                    <h3>M&Q TradeAxis</h3>
                                     <p>Art & Manufacturing Excellence</p>
                                 </div>
                             </div>

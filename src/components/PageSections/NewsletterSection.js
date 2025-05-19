@@ -49,7 +49,7 @@ export default function NewsletterSection() {
                     <div className="col-xl-7 col-lg-7">
                         <div className="section-title">
                             <div className="heading-animation">
-                                <h2>Stay Updated with <br/> M&Q TraderAxis <span><i
+                                <h2>Stay Updated with <br/> M&Q TradeAxis <span><i
                                     className="las la-arrow-right"></i></span></h2>
                             </div>
                         </div>

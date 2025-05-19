@@ -23,7 +23,7 @@ export default function HeroSectionThree(){
                         </div>
                         <div className="offset-xl-1 col-xl-4 offset-lg-1 col-lg-4 col-md-5">
                             <div className="hero-area-content">
-                                <p>At M&Q TraderAxis, we are passionate about bringing wood to life through traditional craftsmanship. Our team of master woodcarvers transforms premium hardwoods into stunning sculptures and functional art pieces that showcase the natural beauty of the material enhanced by skilled hands.</p>
+                                <p>At M&Q TradeAxis, we are passionate about bringing wood to life through traditional craftsmanship. Our team of master woodcarvers transforms premium hardwoods into stunning sculptures and functional art pieces that showcase the natural beauty of the material enhanced by skilled hands.</p>
                             </div>
                             <div className="directon-sign">
                                 <i className="las la-arrow-down"></i>
@@ -35,7 +35,7 @@ export default function HeroSectionThree(){
                         </div>
                         <div className="section-title mb-0">
                             <span><i className="las la-arrow-down mt-30"></i></span>
-                            <h3>M&Q TraderAxis</h3>
+                            <h3>M&Q TradeAxis</h3>
                             <p>Exceptional Carving Art</p>
                         </div>
                     </div>

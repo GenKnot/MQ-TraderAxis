@@ -10,7 +10,7 @@ export default function AboutAreaSection(){
                     <div className="col-xl-9 col-lg-8">
                         <div className="section-title">
                             <div className="heading-animation">
-                                <h2>About <span>/</span> <br/> M&Q TraderAxis</h2>
+                                <h2>About <span>/</span> <br/> M&Q TradeAxis</h2>
                             </div>
                         </div>
                     </div>
@@ -40,7 +40,7 @@ export default function AboutAreaSection(){
                     <div className="col-xl-3 col-lg-3">
                         <div className="about-content-wrapper">
                             <div className="heading-animation">
-                                <h3>M&Q TraderAxis is a team of dedicated master artisans creating exceptional works of art and precision manufacturing</h3>
+                                <h3>M&Q TradeAxis is a team of dedicated master artisans creating exceptional works of art and precision manufacturing</h3>
                             </div>
                             <div className="p-animation">
                                 <p>With decades of experience in traditional and contemporary woodcarving techniques, we transform premium hardwoods into breathtaking sculptures, reliefs, and functional art pieces that become family heirlooms and valuable collectibles.</p>

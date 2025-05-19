@@ -23,7 +23,7 @@ export const ENDPOINTS = {
         LIST: `${API_BASE_URL}/api/faqs/`,
     },
     CONTACT: {
-        SUBMIT: `${API_BASE_URL}/api/contact/`,
+        SUBMIT: `${API_BASE_URL}/api/contacts/`,
     },
     NEWSLETTER: {
         SUBSCRIBE: `${API_BASE_URL}/api/newsletter/subscribe/`,

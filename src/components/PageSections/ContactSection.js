@@ -40,9 +40,10 @@ export default function ContactSection() {
                 return;
             }
 
-            const simulatedResponse = { success: true };
+            // 调用API提交表单
+            const response = await submitContactForm(formData);
 
-            if (simulatedResponse.success) {
+            if (response.success) {
                 setFormData({
                     name: "",
                     email: "",
@@ -52,12 +53,12 @@ export default function ContactSection() {
 
                 setSubmitResult({
                     success: true,
-                    message: "Thank you for your message! We'll be in touch soon."
+                    message: "Thank you for your message!"
                 });
             } else {
                 setSubmitResult({
                     success: false,
-                    message: "There was an error submitting your form. Please try again."
+                    message: response.message || "There was an error submitting your form. Please try again."
                 });
             }
         } catch (error) {

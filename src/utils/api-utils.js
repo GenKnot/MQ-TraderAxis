@@ -64,7 +64,13 @@ export async function submitContactForm(formData) {
             throw error;
         }
 
-        return await response.json();
+        const data = await response.json();
+        
+        return {
+            success: true,
+            message: "Thank you for your message!",
+            data: data
+        };
     } catch (error) {
         console.error('Error submitting form:', error);
 

@@ -11,18 +11,28 @@ export default function WoodCarvingCard({ carving }) {
         );
     }
 
+    const imageUrl = carving.main_image_url || carving.image || carving.main_image;
+
     return (
         <div className="wood-carving-card">
             <div className="carving-image">
-                <img
-                    src={carving.image}
-                    alt={carving.title}
-                    className="img-fluid"
-                    onError={(e) => {
-                        e.target.onerror = null;
-                        e.target.src = "/assets/img/placeholder.jpg"; // Fallback image path
-                    }}
-                />
+                {imageUrl ? (
+                    <img
+                        src={imageUrl}
+                        alt={carving.title}
+                        className="img-fluid"
+                        onError={(e) => {
+                            console.error('Failed to load image:', imageUrl);
+                            e.target.onerror = null;
+                            e.target.src = "/assets/img/placeholder.jpg"; // Fallback image path
+                        }}
+                    />
+                ) : (
+                    <div className="no-image-placeholder d-flex align-items-center justify-content-center bg-light"
+                         style={{minHeight: '200px'}}>
+                        <span className="text-muted">No image available</span>
+                    </div>
+                )}
                 {carving.inStock === false && (
                     <span className="sold-out-badge">Sold Out</span>
                 )}

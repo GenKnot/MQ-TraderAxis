@@ -1,4 +1,5 @@
-import {categories, comments, latestPosts, tags} from "@/data/blog";
+import {categories, latestPosts, tags} from "@/data/blog";
+import Comments from "@/components/Comments";
 
 import blogFeatureImage from "@/assets/img/blog/blog-feature.jpg";
 import relatedBlog1 from "@/assets/img/blog/blog-15.jpg";
@@ -76,7 +77,6 @@ export default function BlogDetailsSection() {
                         <div className="blog-meta">
                             <span>Sarah Roberts</span>
                             <span>September 22, 2023</span>
-                            <p>26 Comments</p>
                         </div>
 
                         {/* Featured Image */}
@@ -111,47 +111,7 @@ export default function BlogDetailsSection() {
                             </div>
                         </div>
 
-                        {/* Comments Section */}
-                        <div className="commetns-section-wrap mt-100">
-                            <h5>{comments.length} Comments</h5>
-                            <hr/>
-                            {comments.map(comment => (
-                                <div className="single-comments-wrap mt-60" key={comment.id}>
-                                    <div className="single-comments-inner">
-                                        <div className="comments-autor-thumb">
-                                            <img src={comment.image.src} alt={comment.name}/>
-                                        </div>
-                                        <div className="comments-content">
-                                            <h6>{comment.name}</h6>
-                                            <p className="comments-date">{comment.date}</p>
-                                            <p>{comment.content}</p>
-                                            <a href="#" className="reply-btn"><i className="las la-reply-all"></i>Reply</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-
-                        {/* Comment Form */}
-                        <div className="comments-form-wrap">
-                            <h3>Leave A Comment</h3>
-                            <form action="#">
-                                <div className="row">
-                                    <div className="col-md-6">
-                                        <input type="text" placeholder="Name"/>
-                                    </div>
-                                    <div className="col-md-6">
-                                        <input type="email" placeholder="Email"/>
-                                    </div>
-                                    <div className="col-12">
-                                        <textarea placeholder="Write a Comment"></textarea>
-                                    </div>
-                                    <div className="col-12">
-                                        <input type="submit" value="Submit"/>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
+                        <Comments />
 
                     </div>
                 </div>

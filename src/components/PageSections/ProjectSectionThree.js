@@ -3,13 +3,13 @@
 import React, {useState, useEffect} from 'react';
 import Link from "next/link";
 import WoodCarvingCard from "@/components/WoodCarvingCard";
-import {fetchCategories, fetchAllCarvings, fetchCarvingsByCategory} from "@/utils/api-utils";
+import {fetchCategories, fetchAllProducts, fetchProductsByCategory} from "@/utils/api-utils";
 
 export default function ProjectSectionThree() {
     const [activeTab, setActiveTab] = useState("all");
     const [categories, setCategories] = useState([]);
-    const [allCarvings, setAllCarvings] = useState([]);
-    const [filteredCarvings, setFilteredCarvings] = useState([]);
+    const [allProducts, setAllProducts] = useState([]);
+    const [filteredProducts, setFilteredProducts] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
@@ -24,10 +24,10 @@ export default function ProjectSectionThree() {
                     setCategories([...allCategoriesOption, ...categoriesData]);
                 }
 
-                const carvingsData = await fetchAllCarvings();
-                if (carvingsData) {
-                    setAllCarvings(carvingsData);
-                    setFilteredCarvings(carvingsData);
+                const productsData = await fetchAllProducts();
+                if (productsData) {
+                    setAllProducts(productsData);
+                    setFilteredProducts(productsData);
                 }
             } catch (err) {
                 console.error("Error loading data:", err);
@@ -41,34 +41,34 @@ export default function ProjectSectionThree() {
     }, []);
 
     useEffect(() => {
-        async function filterCarvings() {
+        async function filterProducts() {
             try {
                 setLoading(true);
 
                 if (activeTab === "all") {
-                    setFilteredCarvings(allCarvings);
+                    setFilteredProducts(allProducts);
                 } else {
-                    const categoryData = await fetchCarvingsByCategory(activeTab);
+                    const categoryData = await fetchProductsByCategory(activeTab);
                     if (categoryData) {
-                        setFilteredCarvings(categoryData);
+                        setFilteredProducts(categoryData);
                     } else {
-                        const filtered = allCarvings.filter(carving => {
-                            const category = categories.find(cat => cat.id === carving.category);
+                        const filtered = allProducts.filter(product => {
+                            const category = categories.find(cat => cat.id === product.category);
                             return category && category.slug === activeTab;
                         });
-                        setFilteredCarvings(filtered);
+                        setFilteredProducts(filtered);
                     }
                 }
             } catch (err) {
-                console.error("Error filtering carvings:", err);
+                console.error("Error filtering products:", err);
                 setError("Failed to filter collection");
             } finally {
                 setLoading(false);
             }
         }
 
-        if (categories.length > 0 && allCarvings.length > 0) {
-            filterCarvings();
+        if (categories.length > 0 && allProducts.length > 0) {
+            filterProducts();
         }
     }, [activeTab, categories.length > 0]);
 
@@ -143,26 +143,26 @@ export default function ProjectSectionThree() {
                         renderErrorState()
                     ) : (
                         <div className="row wood-carvings-grid">
-                            {filteredCarvings.length > 0 ? (
-                                filteredCarvings.map(carving => (
-                                    <div className="col-xl-6 col-lg-6 col-md-12 mb-4" key={carving.id}>
+                            {filteredProducts.length > 0 ? (
+                                filteredProducts.map(product => (
+                                    <div className="col-xl-6 col-lg-6 col-md-12 mb-4" key={product.id}>
                                         <WoodCarvingCard carving={{
-                                            id: carving.id,
-                                            title: carving.title,
-                                            category: carving.category_name,
-                                            description: carving.description,
-                                            material: carving.material,
-                                            dimensions: carving.dimensions,
-                                            price: parseFloat(carving.price),
-                                            inStock: carving.in_stock,
-                                            image: carving.main_image,
-                                            gallery: carving.gallery_images?.map(img => img.image) || []
+                                            id: product.id,
+                                            title: product.title,
+                                            category: product.category_name,
+                                            description: product.description,
+                                            material: product.material,
+                                            dimensions: product.dimensions,
+                                            price: parseFloat(product.price),
+                                            inStock: product.in_stock,
+                                            image: product.main_image,
+                                            gallery: product.gallery_images?.map(img => img.image) || []
                                         }}/>
                                     </div>
                                 ))
                             ) : (
                                 <div className="col-12 text-center mt-4">
-                                    <p>No carvings found in this category. Check back soon for new additions!</p>
+                                    <p>No products found in this category. Check back soon for new additions!</p>
                                 </div>
                             )}
                         </div>

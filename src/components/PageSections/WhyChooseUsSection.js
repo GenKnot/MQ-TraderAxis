@@ -9,7 +9,7 @@ export default function WhyChooseUsSection() {
                 <div className="row">
                     <div className="col-xl-3 col-lg-3">
                         <div className="section-title">
-                            <h2>Why Choose MWC?</h2>
+                            <h2>Why Choose Us?</h2>
                         </div>
                     </div>
                     <div className="offset-xl-1 col-xl-8 offset-lg-1 col-lg-8">

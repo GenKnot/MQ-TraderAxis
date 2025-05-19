@@ -25,7 +25,7 @@ export default function HeroAboutPageSection() {
                 <div className="row mt-30">
                     <p>M&Q TraderAxis was founded in 2010 by Muta, a third-generation woodcarver with a passion for transforming wood into art. What began as a small studio in Beijing has grown into a renowned wood sculpture gallery and workshop.</p>
                     <p>Our team combines traditional woodcarving techniques passed down through generations with modern design sensibilities. We are dedicated to preserving the ancient craft of woodcarving while pushing the boundaries of artistic expression through this timeless medium.</p>
-                    <p>Today, MWCarving pieces can be found in private collections, corporate headquarters, and galleries across North America, Europe, and Asia.</p>
+                    <p>Today, M&Q TraderAxis pieces can be found in private collections, corporate headquarters, and galleries across North America, Europe, and Asia.</p>
                 </div>
             </div>
         </div>

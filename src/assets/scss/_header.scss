@@ -31,7 +31,23 @@
 			@media #{$xs} {        
 				font-size: 30px;	
 				border-right: none;			
-			} 
+			}
+
+			@media (max-width: 1090px) and (min-width: 1030px) {
+				font-size: 1.2rem;
+			}
+
+			@media (max-width: 1029px) and (min-width: 950px) {
+				font-size: 1rem;
+			}
+
+			@media (max-width: 949px) and (min-width: 700px) {
+				font-size: 30px;
+			}
+
+			@media (max-width: 570px) {
+				font-size: 1.2rem;
+			}
 		}
 
 

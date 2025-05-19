@@ -1,6 +1,6 @@
 {
-  "name": "mwcarving",
-  "version": "0.1.0",
+  "name": "traderaxis",
+  "version": "0.9.1",
   "private": true,
   "scripts": {
     "dev": "next dev",

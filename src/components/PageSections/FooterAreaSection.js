@@ -8,19 +8,19 @@ export default function FooterAreaSection() {
                     <div className="row">
                         <div className="col-lg-4 col-md-6 col-sm-12">
                             <Link href="/" className="logo">M&Q TraderAxis</Link>
-                            <p>Exceptional Wood Carving Art <br/> Handcrafted by Master Artisans
+                            <p>Exquisite Wood & Metal <br/> Handcrafted by Master Artisans
                             </p>
                         </div>
                         <div className="col-lg-2 col-md-6">
                             <h5>Studio</h5>
-                            <p>Main Workshop- <br/>
-                                Address
+                            <p>Main Workshop<br/>
+                                New York
                             </p>
                             <div className="company-email">
                                 <a href="mailto:zz119020@proton.me">zz119020@proton.me</a>
                             </div>
                             <div className="phone-number">
-                                <p>9176672791</p>
+                                <p>917-667-2791</p>
                             </div>
 
                         </div>

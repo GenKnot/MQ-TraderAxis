@@ -25,16 +25,16 @@ export async function fetchBanners() {
     return fetchFromAPI(ENDPOINTS.BANNERS.LIST);
 }
 
-export async function fetchAllCarvings() {
-    return fetchFromAPI(ENDPOINTS.CARVINGS.LIST);
+export async function fetchAllProducts() {
+    return fetchFromAPI(ENDPOINTS.PRODUCTS.LIST);
 }
 
-export async function fetchCarvingsByCategory(categorySlug) {
-    return fetchFromAPI(ENDPOINTS.CARVINGS.BY_CATEGORY(categorySlug));
+export async function fetchProductsByCategory(categorySlug) {
+    return fetchFromAPI(ENDPOINTS.PRODUCTS.BY_CATEGORY(categorySlug));
 }
 
-export async function fetchCarvingDetails(id) {
-    return fetchFromAPI(ENDPOINTS.CARVINGS.DETAIL(id));
+export async function fetchProductDetails(id) {
+    return fetchFromAPI(ENDPOINTS.PRODUCTS.DETAIL(id));
 }
 
 export async function fetchFaqs() {

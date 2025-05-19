@@ -44,11 +44,20 @@ export async function fetchFaqs() {
 
 export async function submitContactForm(formData) {
     try {
+        const getCookie = (name) => {
+            const value = `; ${document.cookie}`;
+            const parts = value.split(`; ${name}=`);
+            if (parts.length === 2) return parts.pop().split(';').shift();
+        };
+
+        const csrfToken = getCookie('csrftoken');
+
         const response = await fetch(ENDPOINTS.CONTACT.SUBMIT, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
                 'Accept': 'application/json',
+                ...(csrfToken && { 'X-CSRFToken': csrfToken }),
             },
             credentials: 'include',
             body: JSON.stringify(formData),
@@ -65,7 +74,7 @@ export async function submitContactForm(formData) {
         }
 
         const data = await response.json();
-        
+
         return {
             success: true,
             message: "Thank you for your message!",

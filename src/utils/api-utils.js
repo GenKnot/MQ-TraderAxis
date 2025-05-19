@@ -44,49 +44,61 @@ export async function fetchFaqs() {
 
 export async function submitContactForm(formData) {
     try {
-        const getCookie = (name) => {
-            const value = `; ${document.cookie}`;
-            const parts = value.split(`; ${name}=`);
-            if (parts.length === 2) return parts.pop().split(';').shift();
+        // First, get CSRF token
+        const csrfResponse = await fetch(`${API_BASE_URL}/api/csrf-token/`, {
+            method: 'GET',
+            credentials: 'include',
+        });
+
+        let csrfToken = '';
+        if (csrfResponse.ok) {
+            const csrfData = await csrfResponse.json();
+            csrfToken = csrfData.csrfToken;
+        }
+
+        // If we don't get a token from API, try to get from cookie
+        if (!csrfToken) {
+            const getCookie = (name) => {
+                const value = `; ${document.cookie}`;
+                const parts = value.split(`; ${name}=`);
+                if (parts.length === 2) return parts.pop().split(';').shift();
+            };
+            csrfToken = getCookie('csrftoken');
+        }
+
+        const headers = {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json',
         };
 
-        const csrfToken = getCookie('csrftoken');
+        if (csrfToken) {
+            headers['X-CSRFToken'] = csrfToken;
+        }
 
         const response = await fetch(ENDPOINTS.CONTACT.SUBMIT, {
             method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json',
-                ...(csrfToken && { 'X-CSRFToken': csrfToken }),
-            },
+            headers: headers,
             credentials: 'include',
             body: JSON.stringify(formData),
         });
 
         if (!response.ok) {
-            const errorData = await response.text();
-            console.error('API error response:', errorData);
-
-            const error = new Error(`API error: ${response.status} - ${response.statusText}`);
-            error.status = response.status;
-            error.data = errorData;
-            throw error;
+            const errorText = await response.text();
+            console.error('API error response:', errorText);
+            throw new Error(`Server error: ${response.status}`);
         }
 
         const data = await response.json();
-
         return {
             success: true,
-            message: "Thank you for your message!",
+            message: data.message || "Thank you for your message!",
             data: data
         };
     } catch (error) {
         console.error('Error submitting form:', error);
-
         return {
             success: false,
             message: error.message || 'Network error occurred',
-            status: error.status || 'network_error'
         };
     }
 }

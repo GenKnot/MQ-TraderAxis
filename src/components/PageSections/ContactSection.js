@@ -1,8 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import {useState} from "react";
 import contactBg from "@/assets/img/contact-bg.jpg";
-import { submitContactForm } from "@/utils/api-utils";
+import {submitContactForm} from "@/utils/api-utils";
 
 export default function ContactSection() {
     const [formData, setFormData] = useState({
@@ -18,7 +18,7 @@ export default function ContactSection() {
     });
 
     const handleChange = (e) => {
-        const { name, value } = e.target;
+        const {name, value} = e.target;
         setFormData(prev => ({
             ...prev,
             [name]: value
@@ -30,6 +30,7 @@ export default function ContactSection() {
 
         try {
             setSubmitting(true);
+            setSubmitResult({type: "", message: ""});
 
             // Basic validation
             if (!formData.name || !formData.email || !formData.message) {
@@ -40,7 +41,7 @@ export default function ContactSection() {
                 return;
             }
 
-            // 调用API提交表单
+            // Submit form
             const response = await submitContactForm(formData);
 
             if (response.success) {
@@ -53,7 +54,7 @@ export default function ContactSection() {
 
                 setSubmitResult({
                     success: true,
-                    message: "Thank you for your message!"
+                    message: "Thank you for your message! We'll get back to you soon."
                 });
             } else {
                 setSubmitResult({
@@ -88,7 +89,11 @@ export default function ContactSection() {
                 <div className="row mt-60">
                     <div className="col-xl-5 col-lg-5">
                         <div className="contact-text">
-                            <p>Interested in acquiring a masterpiece for your collection or commissioning a custom wood carving? We're here to help! Fill out the contact form or reach out directly via phone or email. Our team will respond within 12 hours to discuss your interests, answer questions about our work, or arrange a studio visit to see our craftsmanship in person.</p>
+                            <p>Interested in acquiring a masterpiece for your collection or commissioning a custom wood
+                                carving? We're here to help! Fill out the contact form or reach out directly via phone
+                                or email. Our team will respond within 12 hours to discuss your interests, answer
+                                questions about our work, or arrange a studio visit to see our craftsmanship in
+                                person.</p>
                         </div>
                     </div>
                     <div className="offset-xl-1 col-xl-6 offset-lg-1 col-lg-6">
@@ -99,7 +104,8 @@ export default function ContactSection() {
 
 
                             {submitResult.message && (
-                                <div className={`alert ${submitResult.success ? 'alert-success' : 'alert-danger'} mb-4`} role="alert">
+                                <div className={`alert ${submitResult.success ? 'alert-success' : 'alert-danger'} mb-4`}
+                                     role="alert">
                                     {submitResult.message}
                                 </div>
                             )}
@@ -153,7 +159,7 @@ export default function ContactSection() {
                             <div className="google-map">
                                 <iframe
                                     src="https://www.google.com/maps/embed?pb=montreal"
-                                    width="600" height="600" style={{ border: 0}} allowFullScreen="" loading="lazy"
+                                    width="600" height="600" style={{border: 0}} allowFullScreen="" loading="lazy"
                                     referrerPolicy="no-referrer-when-downgrade"></iframe>
                             </div>
                         </div>
